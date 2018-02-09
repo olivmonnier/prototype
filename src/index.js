@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 import { loadDirectories } from './actions';
-import store from './store';
-import { LOAD_DIRECTORIES } from './constants';
+import configureStore from './store/configureStore';
 
-import App from './containers/App';
+import App from './components/App';
 
-store.dispatch(loadDirectories(LOAD_DIRECTORIES));
+const store = configureStore();
+store.dispatch(loadDirectories());
 
 ReactDOM.render(
   <Provider store={store}>
