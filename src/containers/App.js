@@ -3,29 +3,29 @@ import { connect } from 'react-redux';
 import App from '../components/App';
 
 import {
-  addFile,
-  updateFile,
-  deleteFile,
+  addDirectory,
+  updateDirectory,
+  deleteDirectory,
 } from '../actions';
 
 function mapStateToProps(state) {
-  const { files } = state;
+  const { directories } = state;
 
   return {
-    files
+    directories
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleAddFile(name) {
-      dispatch(addFile(name))
+    handleAddDirectory(name) {
+      dispatch(addDirectory(name))
     },
-    handleDeleteFile(id) {
-      dispatch(deleteFile(id))
+    handleDeleteDirectory(id) {
+      dispatch(deleteDirectory(id))
     },
-    handleUpdateFile(id, ...rest) {
-      dispatch(updateFile(id, rest))
+    handleUpdateDirectory(id, ...rest) {
+      dispatch(updateDirectory(id, rest))
     }
   }
 }

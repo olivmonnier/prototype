@@ -2,13 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
-import { loadFiles } from './actions';
+import { loadDirectories } from './actions';
 import store from './store';
-import { LOAD_FILES } from './constants';
+import { LOAD_DIRECTORIES } from './constants';
 
 import App from './containers/App';
 
-store.dispatch(loadFiles(LOAD_FILES));
+store.dispatch(loadDirectories(LOAD_DIRECTORIES));
 
 ReactDOM.render(
   <Provider store={store}>
