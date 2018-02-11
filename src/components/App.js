@@ -1,12 +1,7 @@
-import React, { PropTypes } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import * as actions from '../actions';
+import React, { Component } from 'react';
 
-class App extends React.Component {
+class App extends Component {
   render() {
-    const { props } = this.props;
-
     return (
       <div>
 
@@ -15,14 +10,4 @@ class App extends React.Component {
   }
 }
 
-function mapStateToProps(states) {
-  return {
-    states
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  actions: bindActionCreators(actions, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default App;
